@@ -7,16 +7,18 @@
  *
  * Usage:
  * You need to create an ElegooCar object before using this.
- * Then, you need to pass a pointer to it to the init function.
- *
+ * Then, you need to pass a pointer to it into the init function.
+ * You can find an example of this in main.ino. (lines 4 and 11)
+ * 
  * There are two main functions you can use to drive the robot.
- * Both take integer values between -255 and 255.
- * In both cases, the robot will keep going until you tell it to stop.
+ * Both take two integer values between -255 and 255.
+ * In both functions, the robot will keep going until you tell it to stop.
  * You can use the stop() function for this.
  *
  * tankDrive moves the robot according to a given speed for each side.
  * You can specify a speed for the left and right sides of the robot.
  * This means a full-speed left turn is tankDrive(-255, 255);
+ * (full speed backwards on the left, full speed forwards on the right)
  * This function is... honestly not that useful.
  * I use arcadeDrive for pretty much everything.
  *
@@ -27,6 +29,7 @@
  *
  * stop() stops the robot. Simple as that.
  * It's the same as tankDrive(0, 0) and arcadeDrive(0, 0).
+ * There really isn't much of a reason for this to exist.
  *
  * Setting a deadzone:
  * You can set a deadzone on the drivebase with the setDeadzone function.

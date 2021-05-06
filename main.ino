@@ -1,8 +1,8 @@
 #include "lib/DriverStation.h"
 #include "lib/drivebase.h"
 
-ElegooCar *robot = new ElegooCar();
-DriverStation *ds = new DriverStation();
+static ElegooCar *robot = new ElegooCar();
+static DriverStation *ds = new DriverStation();
 
 static constexpr uint8_t deadzone = 16;
 
