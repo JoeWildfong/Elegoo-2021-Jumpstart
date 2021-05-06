@@ -4,7 +4,7 @@
 static ElegooCar *robot = new ElegooCar();
 static DriverStation *ds = new DriverStation();
 
-static constexpr uint8_t deadzone = 16;
+static constexpr uint8_t deadzone = 32;
 
 void setup() {
     Serial.begin(115200);
