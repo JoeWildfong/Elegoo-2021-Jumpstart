@@ -39,6 +39,7 @@
  *
  ***********************/
 
+#include <Arduino.h>
 #include "elegoo-car.h"
 
 /// Namespace containing functions to control drive motors.
