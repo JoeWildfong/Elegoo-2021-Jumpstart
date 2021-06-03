@@ -63,7 +63,7 @@ namespace Drivebase {
     /// Robot will not automatically stop.
     void arcadeDrive(int16_t y, int16_t x);
 
-    /// Stops the robot. Equivalent to TankDrive(0, 0) or ArcadeDrive(0, 0).
+    /// Stops the robot. Equivalent to tankDrive(0, 0) or arcadeDrive(0, 0).
     void stop();
 
 } // namespace Drivebase
