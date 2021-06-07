@@ -1,5 +1,6 @@
 #include "lib/DriverStation.h"
 #include "lib/drivebase.h"
+#include "lib/encoders.h"
 
 static ElegooCar *robot = new ElegooCar();
 static DriverStation *ds = new DriverStation();
@@ -10,6 +11,7 @@ void setup() {
     Serial.begin(115200);
     Drivebase::init(robot);
     Drivebase::setDeadzone(deadzone);
+    Encoders::init();
 }
 
 void autonomous() {}
@@ -44,4 +46,8 @@ void loop() {
             break;
         }
     }
+    Serial.print("Encoders: L - ");
+    Serial.print(Encoders::getLeftTicks());
+    Serial.print(" R - ");
+    Serial.println(Encoders::getRightTicks());
 }
